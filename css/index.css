@@ -1,0 +1,124 @@
+/***********************************************************************************************/
+/* Web del Romanticismo                                                                        */
+/* CSS de Autores románticos                                                                   */
+/* Autor: Juan Manuel Lanza Pérez                                                              */
+/* Versión 1.0                                                                                 */
+/***********************************************************************************************/
+
+/************************ESTILO GENERAL/************************/
+@font-face {
+  font-family: enunciados;
+  src: url("../fonts/Merienda/Merienda-Regular.ttf");
+}
+
+@font-face {
+  font-family: texto;
+  src: url(../fonts/Fasthand/Fasthand-Regular.ttf);
+}
+
+* {
+  box-sizing: border-box; /*Del border hacia a dentro todo es caja*/
+}
+
+body {
+  font-family: texto;
+  background-color: rgb(114, 11, 11); /*Más tarde lo replanteo*/
+  margin: 0;
+  padding: 0; /*Quitar el por defecto del navegador*/
+}
+
+#wrapper {
+  background-color: rgb(255, 255, 255);
+  width: 80%;
+  margin: auto;
+}
+
+/************************HERO SECTION/************************/
+
+#hero {
+  background-image: url("../images/herofoto.jpg"); /*Coloco la foto de fondo*/
+  filter: blur(1.5px);
+  height: 100vh; /*Obligar a que salga entera*/
+  background-repeat: no-repeat; /*para que la imagen no se repita*/
+  background-size: cover; /*para que cubra el wrapper*/
+  background-position: center;
+  position: relative;
+}
+
+#titulo {
+  font-family: enunciados;
+  font-size: 3rem;
+  text-align: center;
+  width: 40%;
+  position: absolute;
+  top: 15%;
+  left: 30%;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+}
+/*  HERO SECTION 2*/
+#hero2 {
+  background-color: #0099ff;
+  height: 40vh;
+  position: relative;
+}
+
+#titulo2 {
+  position: absolute;
+  top: 50%; /*MUEVO EL TITUTLO A LA MITAD DE ANCHO Y ALTO*/
+  left: 50%;
+  transform: translate(-50%, -50%); /*LO COLOCA EN EL CENTRO*/
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+/*HERO SECTION 3*/
+
+/*HERO 4*/
+#video {
+  position: relative;
+  right: 0;
+  bottom: 0;
+  width: 100%; /*Se adapta exactamente al ancho*/
+  height: 100%;
+}
+/*Vamos a poner el título superpuesto en el video*/
+#titulo4 {
+  /*Lo muevo hacia arriba*/
+  position: relative; /*Los dos son relativos independientes*/
+  top: -209px;
+  height: 200px;
+  background-color: rgba(0, 0, 0, 0.486);
+  color: white;
+  width: 100%;
+  padding: 20px;
+}
+/************************POSICIONAMIENTO ABSOLUTO Y RELATIVO/************************/
+
+/************************MEDIA QUERIES************************/
+/*CONTENEDOR WRAPPER*/
+@media only screen and(width <=900px) {
+  #wrapper {
+    width: 90%;
+  }
+  #titulo {
+    width: 60%;
+    left: 20%;
+  }
+}
+
+@media only screen and(width <=600px) {
+  #wrapper {
+    width: 100%;
+  }
+  #titulo4 {
+    /*Lo muevo hacia arriba*/
+    position: relative; /*Los dos son relativos independientes*/
+    top: -209px;
+    height: 0;
+    background-color: rgba(0, 0, 0, 0.486);
+    color: white;
+    width: 100%;
+    padding: 20px;
+  }
+}

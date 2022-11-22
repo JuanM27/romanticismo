@@ -1,0 +1,91 @@
+/***********************************************************************************************/
+/* Web del Romanticismo                                                                        */
+/* CSS de Autores románticos                                                                   */
+/* Autor: Juan Manuel Lanza Pérez                                                              */
+/* Versión 1.0                                                                                 */
+/***********************************************************************************************/
+@font-face {
+  font-family: titulos;
+  src: url(./../fonts/Fasthand/Fasthand-Regular.ttf);
+}
+@font-face {
+  font-family: texto;
+  src: url(./../fonts/Palanquin/Palanquin-Medium.ttf);
+}
+
+/*PPARA QUE CUENTE EN EL WIDTH DE CADA CAJA, EL BORDE Y EL PADDING*/
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(213, 252, 239);
+  background-image: url(./../images/fondo.jpg);
+  background-size: 25%;
+  /* padding: 4%;*/ /*AL TENER UN WRAPPER ESTE YA HACE ESTA FUNCION*/
+}
+#wrapper {
+  background-color: rgb(248, 222, 165);
+  width: 80%;
+  margin: auto;
+  padding: 15px;
+}
+
+h1,
+h2,
+h3 {
+  font-family: titulos;
+  text-align: center;
+  border: 1px dotted black;
+  padding: 1px;
+  color: rgb(77, 49, 27);
+}
+
+h1 {
+  font-size: 3em;
+}
+
+p {
+  text-align: justify;
+  text-indent: 2.5em;
+  font-family: texto;
+}
+
+#espronceda {
+  float: left;
+  padding: 15px;
+  width: 25%;
+  opacity: 0.75;
+}
+
+#espronceda:hover {
+  opacity: 1;
+}
+
+.limpiafloat {
+  /*Elimina los efectos secundarios de float*/
+  clear: both;
+}
+
+/******************** MEDIA QUERIES ********************/
+/***TAMAÑO TABLET***/
+@media only screen and (width<=800px) {
+  /*Todas las excepciones para tablet*/
+  #wrapper {
+    width: 90%; /*Se aprovecha más el ancho*/
+  }
+  #espronceda {
+    width: 50%; /*Se corrige el zoom de la foto*/
+  }
+}
+/***TAMAÑO MÓVIL***/
+@media only screen and (width<=600px) {
+  /*Todas las excepciones para móvil*/
+  #wrapper {
+    width: 100%; /*Se aprovecha todo el ancho*/
+  }
+  #espronceda {
+    width: 100%; /*Se corrige el tamaño*/
+    padding: 15px 0px; /*Se deja paddign solo donde es necesario*/
+  }
+}
